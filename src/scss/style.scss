@@ -1,0 +1,21 @@
+@import "nullstyle";
+@import "fonts";
+@import "header";
+
+html,body{
+    height: 100%;
+}
+
+.wrapper {
+    height: 100%;
+    padding: 50px
+
+}
+
+.main{
+}
+
+
+
+@import "footer";
+@import "media";
