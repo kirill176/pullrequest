@@ -1,7 +1,6 @@
 {
   "name": "gulp",
   "version": "1.0.0",
-  "description": "",
   "main": "gulpfile.js",
   "type": "module",
   "scripts": {
@@ -85,5 +84,6 @@
       "@babel/preset-react",
       "@babel/preset-typescript"
     ]
-  }
+  },
+  "description": ""
 }
