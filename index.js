@@ -1,9 +1,20 @@
 import express from "express";
+import productRoutes from "./product.routes.js";
+import { logRequest } from "./middleware.js";
+import { errorResponder } from "./error.middleware.js";
 
 const app = express();
-const port = 3000; // Define port
+const port = 3000;
 
-// Hardcoded in-memory products array (in a real app, data would typically come from a database)
+app.use(logRequest);
+app.use(productRoutes);
+app.use(errorResponder);
+
+app.listen(port, () => {
+  console.log(`Server listening at http://localhost:${port}`);
+});
+
+/*// Hardcoded in-memory products array (in a real app, data would typically come from a database)
 const products = [
   { id: 1, name: "Product 1", brand: "Brand A" },
   { id: 2, name: "Product 2", brand: "Brand B" },
@@ -28,4 +39,4 @@ app.get("/products/:brand", (req, res) => {
 });
 
 // start the server
-app.listen(3000, () => console.log(`server start at http://localhost:3000/`));
+app.listen(3000, () => console.log(`server start at http://localhost:3000/`));*/
