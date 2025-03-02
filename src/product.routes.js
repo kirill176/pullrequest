@@ -1,6 +1,6 @@
 import express from "express";
 import products from "./products.js";
-import { blockSpecialBrand } from "./src/middleware.js";
+import { blockSpecialBrand } from "./middleware.js";
 
 const router = express.Router();
 
