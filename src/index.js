@@ -1,5 +1,5 @@
 import express from "express";
-import productRoutes from "./product.routes.js";
+import productRoutes from "../product.routes.js";
 import { logRequest } from "./middleware.js";
 import { errorResponder } from "./error.middleware.js";
 
